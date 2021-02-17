@@ -35,4 +35,5 @@ const (
 	BootSize     = 300 * MiB
 	MetaSize     = 1 * MiB
 	StateSize    = 100 * MiB
+	EphemeralSize = 15000 * MiB
 )

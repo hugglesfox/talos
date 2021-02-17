@@ -148,7 +148,7 @@ func EphemeralTarget(device string, extra *Target) *Target {
 		Label:          constants.EphemeralPartitionLabel,
 		PartitionType:  LinuxFilesystemData,
 		FileSystemType: FilesystemTypeXFS,
-		Size:           0,
+		Size:           EphemeralSize,
 		Force:          true,
 	}
 

@@ -448,8 +448,8 @@ ARG PKGS
 ARG EXTRAS
 ARG USERNAME
 ARG REGISTRY
-ARG VERSION_PKG="github.com/talos-systems/talos/pkg/version"
-ARG IMAGES_PKGS="github.com/talos-systems/talos/pkg/images"
+ARG VERSION_PKG="github.com/hugglesfox/talos/pkg/version"
+ARG IMAGES_PKGS="github.com/hugglesfox/talos/pkg/images"
 WORKDIR /src/cmd/installer
 RUN --mount=type=cache,target=/.cache/go-build go build -ldflags "-s -w -X ${VERSION_PKG}.Name=Talos -X ${VERSION_PKG}.SHA=${SHA} -X ${VERSION_PKG}.Tag=${TAG} -X ${VERSION_PKG}.PkgsVersion=${PKGS} -X ${VERSION_PKG}.ExtrasVersion=${EXTRAS} -X ${IMAGES_PKGS}.Username=${USERNAME} -X ${IMAGES_PKGS}.Registry=${REGISTRY}" -o /installer
 RUN chmod +x /installer
