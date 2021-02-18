@@ -142,6 +142,8 @@ func NewManifest(label string, sequence runtime.Sequence, bootPartitionFound boo
 
 	ephemeralTarget := EphemeralTarget(opts.Disk, nil)
 
+	dataTarget := DataTarget(opts.Disk, nil)
+
 	if opts.Force {
 		ephemeralTarget.Force = true
 	} else {
@@ -150,7 +152,7 @@ func NewManifest(label string, sequence runtime.Sequence, bootPartitionFound boo
 		stateTarget.Size = 0 // expand previous partition to cover whatever space is available
 	}
 
-	for _, target := range []*Target{efiTarget, biosTarget, bootTarget, metaTarget, stateTarget, ephemeralTarget} {
+	for _, target := range []*Target{efiTarget, biosTarget, bootTarget, metaTarget, stateTarget, ephemeralTarget, dataTarget} {
 		if target == nil {
 			continue
 		}

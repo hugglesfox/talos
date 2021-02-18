@@ -112,6 +112,10 @@ const (
 	// the data path.
 	EphemeralMountPoint = "/var"
 
+	// DataPartitionLabel is the label of the partition to use for
+	// mounting at the data path.
+	DataPartitionLabel = "DATA"
+
 	// RootMountPoint is the label of the partition to use for mounting at
 	// the root path.
 	RootMountPoint = "/"

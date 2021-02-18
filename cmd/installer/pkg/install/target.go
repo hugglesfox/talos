@@ -155,6 +155,20 @@ func EphemeralTarget(device string, extra *Target) *Target {
 	return target.enhance(extra)
 }
 
+// DataTarget builts the default data target
+func DataTarget(device string, extra *Target) *Target {
+	target := &Target{
+		Device:         device,
+		Label:          constants.DataPartitionLabel,
+		PartitionType:  LinuxFilesystemData,
+		FileSystemType: FilesystemTypeNone,
+		Size:           0,
+		Force:          true,
+	}
+
+	return target.enhance(extra)
+}
+
 func (t *Target) enhance(extra *Target) *Target {
 	if extra == nil {
 		return t
