@@ -30,10 +30,10 @@ const (
 const (
 	MiB = 1024 * 1024
 
-	EFISize      = 100 * MiB
-	BIOSGrubSize = 1 * MiB
-	BootSize     = 300 * MiB
-	MetaSize     = 1 * MiB
-	StateSize    = 100 * MiB
-	EphemeralSize = 15000 * MiB
+	EFISize       = 100 * MiB
+	BIOSGrubSize  = 1 * MiB
+	BootSize      = 300 * MiB
+	MetaSize      = 1 * MiB
+	StateSize     = 100 * MiB
+	EphemeralSize = 30000 * MiB
 )
