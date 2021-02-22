@@ -330,7 +330,7 @@ func (p *Point) ResizePartition() (resized bool, err error) {
 	}
 
 	for _, partition := range pt.Partitions().Items() {
-		if partition.Name == constants.EphemeralPartitionLabel {
+		if partition.Name == constants.DataPartitionLabel {
 			resized, err := pt.Resize(partition)
 			if err != nil {
 				return false, err
